@@ -48,7 +48,6 @@ def main_workflow():
                 print(f"Error: Video for '{topic}' was not created.")
         else:
             print(f"Error: Script for '{topic}' was not generated.")
-
 def schedule_main_workflow():
     # 매일 특정 시간에 main_workflow 실행 스케줄링
     schedule.every().day.at("08:00").do(main_workflow)

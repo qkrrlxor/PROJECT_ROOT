@@ -4,14 +4,17 @@ import os
 def edit_video(video_path):
     # video_path를 사용하여 비디오를 편집하는 로직을 여기에 작성합니다.
     edited_video_path = f"edited_{video_path}"
-    
+
     # 예제 편집 로직 (실제 편집 로직으로 대체 필요)
     if os.path.exists(video_path):
         with open(video_path, 'rb') as original_file:
             with open(edited_video_path, 'wb') as edited_file:
                 edited_file.write(original_file.read())
-    
+
     return edited_video_path
+
+from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip, AudioFileClip
+import os
 
 def add_subtitles(video_path, subtitles, output_path):
     try:
